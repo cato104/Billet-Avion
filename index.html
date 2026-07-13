@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FUN56 — Jet Ski, Bouée tractée, Flyboard &amp; Wake à Guidel-Plages</title>
-  <meta name="description" content="FUN56, base nautique au port de Guidel-Plages (Morbihan) : jet ski sans permis, bouée tractée, flyboard, ski nautique et wakeboard. Encadrement par moniteurs diplômés d'État. Réservation au 06 31 04 97 96.">
-  <meta property="og:title" content="FUN56 — Motonautisme à Guidel-Plages">
-  <meta property="og:description" content="Jet ski, bouée tractée, flyboard, ski/wake — sensations garanties entre la côte lorientaise et l'île de Groix.">
+  <title>FUN56 — Jet Ski, Flyboard, Wake & Bouée tractée à Guidel-Plages</title>
+  <meta name="description" content="FUN56, les n°1 du motonautisme en Bretagne : jet ski sans permis, flyboard, wakeboard, ski nautique et bouée tractée au port de Guidel-Plages (Morbihan). Réservation au 06 31 04 97 96.">
+  <meta property="og:title" content="FUN56 — Jet Ski, Flyboard, Wake & Bouée tractée à Guidel-Plages">
+  <meta property="og:description" content="FUN56, les n°1 du motonautisme en Bretagne : jet ski sans permis, flyboard, wakeboard, ski nautique et bouée tractée au port de Guidel-Plages (Morbihan). Réservation au 06 31 04 97 96.">
   <meta property="og:image" content="assets/hero.jpg">
   <meta property="og:locale" content="fr_FR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚓</text></svg>">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="#accueil">FUN<span>56</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="Logo FUN56">FUN<span>56</span></a>
       <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-        <a href="#activites">Activités</a>
-        <a href="#groix">Rando Groix</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#infos">Infos pratiques</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="jet-ski.html">Jet Ski</a>
+        <a href="flyboard.html">Flyboard</a>
+        <a href="wake-ski.html">Wake / Ski</a>
+        <a href="bouee-tractee.html">Bouée tractée</a>
+        <a href="atelier.html">Atelier</a>
+        <a href="bon-cadeau.html">Bon cadeau</a>
+        <a href="contact.html">Contact</a>
         <a class="nav-cta" href="tel:+33631049796">06 31 04 97 96</a>
       </nav>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -34,19 +36,15 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
   <section class="hero" id="accueil">
     <div class="hero-bg" role="img" aria-label="Vue aérienne du port de Guidel-Plages avec le logo FUN56"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-kicker">Base nautique · Port de Guidel-Plages · Morbihan</p>
-      <h1>Le motonautisme<br><em>grandeur nature</em><br>en Bretagne Sud</h1>
-      <p class="hero-sub">Jet ski sans permis, bouée tractée, flyboard, ski nautique &amp; wakeboard — encadrés par des moniteurs diplômés d'État, entre la côte lorientaise et l'île de Groix.</p>
+      <p class="hero-kicker">Les n°1 du Motonautisme en Bretagne</p>
+      <h1>Le motonautisme<br><em>grandeur nature</em><br>à Guidel-Plages</h1>
+      <p class="hero-sub">Jet ski sans permis, flyboard, wakeboard, ski nautique &amp; bouée tractée — encadrés par des moniteurs diplômés d'État, entre l'estuaire de la Laïta et l'île de Groix.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="tel:+33631049796">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Réserver — 06 31 04 97 96
-        </a>
+        <a class="btn btn-primary" href="tel:+33631049796"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Réserver — 06 31 04 97 96</a>
         <a class="btn btn-ghost" href="#activites">Découvrir les activités</a>
       </div>
     </div>
@@ -55,12 +53,11 @@
     </a>
   </section>
 
-  <!-- ============ BANDEAU ============ -->
   <section class="strip" id="bandeau">
     <div class="strip-inner">
       <div class="strip-item">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <div><strong>D'avril à septembre</strong><span>Ouvert tous les jours sur réservation</span></div>
+        <div><strong>7j/7 en saison</strong><span>Bureaux ouverts 9h – 19h, sur réservation</span></div>
       </div>
       <div class="strip-item">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -72,207 +69,158 @@
       </div>
       <div class="strip-item">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <div><strong>Sans permis dès 16 ans</strong><span>Passager possible avant 16 ans</span></div>
+        <div><strong>Sans permis dès 16 ans</strong><span>Baptême passager avant 16 ans</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ACTIVITÉS ============ -->
-  <section class="section" id="activites">
+  <section class="section" id="base">
+    <div class="container split">
+      <div class="split-text reveal">
+        <p class="section-kicker">Des activités ludiques et variées</p>
+        <h2>Un terrain de jeu exceptionnel en Bretagne Sud</h2>
+        <p>La base nautique FUN56 est basée à <strong>Guidel-Plages (56520)</strong>, commune située à proximité de Lorient dans le Morbihan. Nos locaux se trouvent sur le terre-plein du port de plaisance de Guidel-Plages, d'où s'effectue le départ de toutes nos activités.</p>
+        <p>Le port se trouve à l'embouchure de la <strong>Laïta</strong>, rivière naturelle qui symbolise la frontière entre le Morbihan et le Finistère.</p>
+        <p>Cet environnement préservé vous offre des paysages aussi somptueux les uns que les autres : que ce soit l'estuaire de la rivière, le long des côtes ou bien au large de l'<strong>île de Groix</strong>, vous aurez l'occasion d'en prendre plein les yeux.</p>
+      </div>
+      <div class="split-media reveal">
+        <img src="assets/port-guidel.jpg" alt="Vue aérienne du port de plaisance de Guidel-Plages et de l'embouchure de la Laïta" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="activites">
     <div class="container">
       <p class="section-kicker">Nos activités</p>
       <h2>Des sensations pour tous les goûts</h2>
       <p class="section-lead">De la glisse tranquille à l'adrénaline pure, chaque sortie est encadrée et sécurisée. Tout le matériel est fourni : il ne vous reste qu'à profiter.</p>
 
       <div class="cards">
-        <article class="card">
+        <a class="card reveal" href="jet-ski.html">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c1.5 1.5 3.5 1.5 5 0s3.5-1.5 5 0 3.5 1.5 5 0 3.5-1.5 5 0"/><path d="M4 12h9l4-3 4 1-2 4"/><path d="M9 12V9h3"/></svg>
           </div>
           <h3>Jet Ski</h3>
-          <p>Initiation, navigation libre ou randonnée accompagnée : pilotez sans permis dès 16 ans, encadré à distance par un moniteur qualifié, entre la côte lorientaise et l'île de Groix.</p>
-          <p class="card-price">à partir de <strong>75&nbsp;€</strong></p>
-        </article>
+          <p>Vous aimez piloter et ressentir cette sensation de vitesse&nbsp;? Le jet ski est fait pour vous. En initiation, navigation libre ou en randonnée jusqu'à l'île de Groix, venez découvrir ou redécouvrir les joies du jet ski.</p>
+          <p class="card-price"><span>dès <strong>40&nbsp;€</strong></span><span class="card-link">Voir les formules →</span></p>
+        </a>
 
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M2 19c1.5 1.5 3.5 1.5 5 0"/></svg>
-          </div>
-          <h3>Bouée tractée</h3>
-          <p>Fous rires garantis, seul ou à plusieurs ! Plusieurs supports au choix — bouée classique, canapé, banane — pour des sessions à sensations adaptées à tous les âges.</p>
-          <p class="card-price">à partir de <strong>20&nbsp;€</strong> / pers.</p>
-        </article>
-
-        <article class="card">
+        <a class="card reveal" href="flyboard.html">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9"/><path d="M8 21h8"/><path d="M12 9c-3 0-4-3-4-6 4 0 5 2 4 6z"/><path d="M12 9c3 0 4-3 4-6-4 0-5 2-4 6z"/></svg>
           </div>
           <h3>Flyboard</h3>
-          <p>Les pieds fixés à la planche, élevez-vous au-dessus de l'eau comme un super-héros. Une expérience unique, accessible plus facilement qu'on ne le croit !</p>
-          <p class="card-price">à partir de <strong>75&nbsp;€</strong></p>
-        </article>
+          <p>Qui n'a jamais rêvé une fois dans sa vie de pouvoir voler, s'élever dans les airs, d'avoir cette sensation de légèreté et de plénitude&nbsp;? Votre moniteur vous fera parvenir aux merveilles du flyboard.</p>
+          <p class="card-price"><span><strong>99&nbsp;€</strong> / 20 min</span><span class="card-link">Découvrir →</span></p>
+        </a>
 
-        <article class="card">
+        <a class="card reveal" href="wake-ski.html">
           <div class="card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20c1.5 1.5 3.5 1.5 5 0s3.5-1.5 5 0 3.5 1.5 5 0"/><path d="M4 15 18 5"/><path d="M15 4l4 3"/><circle cx="19" cy="9" r="1.2"/></svg>
           </div>
-          <h3>Ski nautique &amp; Wake</h3>
-          <p>Glisse pure derrière le bateau : ski nautique pour le style classique, wakeboard pour les figures. Du débutant au rider confirmé, on adapte le rythme.</p>
-          <p class="card-price">à partir de <strong>35&nbsp;€</strong></p>
-        </article>
+          <h3>Wake Board / Ski Nautique</h3>
+          <p>Besoin de nouvelles sensations de glisse, avec une discipline dans l'air du temps&nbsp;? N'hésitez plus et profitez de nos magnifiques plages de Guidel, tout en faisant du sport.</p>
+          <p class="card-price"><span>dès <strong>35&nbsp;€</strong></span><span class="card-link">Voir les formules →</span></p>
+        </a>
+
+        <a class="card reveal" href="bouee-tractee.html">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M2 19c1.5 1.5 3.5 1.5 5 0"/></svg>
+          </div>
+          <h3>Bouée tractée</h3>
+          <p>Envie de vous éclater à plusieurs&nbsp;? Embarquez jusqu'à 10 personnes sur l'une de nos bouées. Et avec le Flyfish, décollez face au vent comme un cerf-volant pour un vrai moment de bonheur&nbsp;!</p>
+          <p class="card-price"><span><strong>25&nbsp;€</strong> / 15 min</span><span class="card-link">Découvrir →</span></p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ RANDO GROIX ============ -->
-  <section class="feature" id="groix">
-    <div class="container feature-grid">
-      <div class="feature-text">
-        <p class="section-kicker light">L'expérience signature</p>
-        <h2>Le tour de l'île de Groix en jet ski</h2>
-        <p>Deux heures de pilotage au large de la Bretagne Sud pour faire le tour complet de l'île de Groix, avec une escale d'1h30 au port de Locmaria : baignade, verre en terrasse ou déjeuner face à la mer (restauration sur place, non incluse).</p>
-        <ul class="feature-list">
-          <li>2h de pilotage encadré en pleine mer</li>
-          <li>Escale d'1h30 au port de Locmaria</li>
-          <li>Accessible dès 16 ans, avec ou sans permis mer</li>
-          <li>Combinaison et gilet de sauvetage fournis</li>
-        </ul>
-        <a class="btn btn-primary" href="tel:+33631049796">Réserver ma randonnée</a>
+  <section class="section" id="equipe">
+    <div class="container split reverse">
+      <div class="split-media reveal">
+        <img src="assets/jetski-plage.jpg" alt="Les jet skis FUN56 alignés sur la plage devant le port de Guidel-Plages" loading="lazy">
       </div>
-      <div class="feature-media" aria-hidden="true">
-        <div class="feature-badge">
-          <span class="feature-badge-big">2h</span>
-          <span>de pilotage</span>
-        </div>
-        <div class="feature-badge alt">
-          <span class="feature-badge-big">1h30</span>
-          <span>d'escale à Locmaria</span>
-        </div>
+      <div class="split-text reveal">
+        <p class="section-kicker">L'équipe FUN56</p>
+        <h2>FUN56, c'est qui&nbsp;?</h2>
+        <p><strong>Les n°1 du Motonautisme en Bretagne&nbsp;!</strong> C'est la mise à votre service de plus de 10 ans d'expérience d'une équipe de passionnés, afin de vous proposer des activités nautiques encadrées par des moniteurs diplômés d'État.</p>
+        <p>FUN56 a été créé par <strong>Anthony Garnier</strong>, tour à tour pilote, moniteur, formateur et expert en motonautisme. Il se chargera avec son équipe de vous apporter une écoute attentive afin de répondre au mieux à vos demandes.</p>
+        <p>Que ce soit pour des enterrements de vie de célibataire, des journées d'intégration ou des sorties de cohésion de groupe pour les entreprises, n'hésitez pas à faire appel à nous. Nous pouvons vous programmer des journées ou demi-journées avec la privatisation de notre base nautique, et également vous mettre à disposition une salle de réunion.</p>
+        <a class="btn btn-dark" style="margin-top:22px" href="contact.html">Organiser votre événement</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ TARIFS ============ -->
-  <section class="section" id="tarifs">
+  <section class="section alt" id="tarifs">
     <div class="container">
-      <p class="section-kicker">Tarifs</p>
+      <p class="section-kicker">Nos tarifs</p>
       <h2>Simple et sans surprise</h2>
-      <p class="section-lead">Les prix ci-dessous sont donnés à titre indicatif « à partir de ». Contactez-nous pour composer votre session sur mesure (groupes, EVG/EVF, comités d'entreprise…).</p>
+      <p class="section-lead">Le prix s'entend TTC et inclut l'assurance responsabilité civile activité nautique. Les règlements s'effectuent par CB, espèces ou chèque vacances ANCV uniquement — les chèques ne sont acceptés que pour les cautions.</p>
 
-      <div class="price-table" role="table" aria-label="Grille tarifaire">
-        <div class="price-row" role="row">
-          <span role="cell"><strong>Jet ski</strong> — initiation &amp; navigation libre</span>
-          <span class="price" role="cell">dès 75&nbsp;€</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="cell"><strong>Jet ski</strong> — randonnée tour de Groix</span>
-          <span class="price" role="cell">sur réservation</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="cell"><strong>Bouée tractée</strong> — dès 20&nbsp;€/pers.</span>
-          <span class="price" role="cell">session 85&nbsp;€</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="cell"><strong>Flyboard</strong> — la session découverte</span>
-          <span class="price" role="cell">dès 75&nbsp;€</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="cell"><strong>Ski nautique / Wakeboard</strong> — le passage</span>
-          <span class="price" role="cell">dès 35&nbsp;€</span>
-        </div>
+      <div class="price-table reveal">
+        <div class="price-group">Jet Ski — tarif par jet, seul ou à deux</div>
+        <div class="price-row"><span><strong>Baptême jet</strong> — passager derrière un moniteur (moins de 16 ans)</span><span class="price">40&nbsp;€ / 20 min</span></div>
+        <div class="price-row"><span><strong>Navigation libre</strong> — zone encadrée à vue du moniteur</span><span class="price">85&nbsp;€ / 45 min</span></div>
+        <div class="price-row"><span><strong>Randonnée</strong> — vers Groix ou les côtes du Finistère</span><span class="price">135&nbsp;€ / 1h15</span></div>
+        <div class="price-row"><span><strong>Excursion île de Groix</strong> — tour complet + escale à Locmaria</span><span class="price">210&nbsp;€ / 2h</span></div>
+        <div class="price-group">Glisse &amp; bouées</div>
+        <div class="price-row"><span><strong>Flyboard</strong> — la session découverte</span><span class="price">99&nbsp;€ / 20 min</span></div>
+        <div class="price-row"><span><strong>Wake Board / Ski Nautique</strong></span><span class="price">35&nbsp;€ / 10 min · 60&nbsp;€ / 20 min · 160&nbsp;€ / 1h</span></div>
+        <div class="price-row"><span><strong>Bouée tractée</strong> — Galette, Banane, Flyfish…</span><span class="price">25&nbsp;€ / pers. / 15 min</span></div>
       </div>
-      <p class="price-note">Tarifs susceptibles d'évoluer selon la saison — confirmation au moment de la réservation.</p>
+      <p class="price-note">Réservation obligatoire pour toutes les activités. Voir les <a href="cgv.html">conditions générales de vente</a>.</p>
     </div>
   </section>
 
-  <!-- ============ INFOS PRATIQUES ============ -->
-  <section class="section alt" id="infos">
+  <section class="cta">
     <div class="container">
-      <p class="section-kicker">Infos pratiques</p>
-      <h2>Avant de venir</h2>
-      <div class="infos-grid">
-        <div class="info">
-          <h3>Où nous trouver&nbsp;?</h3>
-          <p>La base est installée sur le terre-plein du port de plaisance de Guidel-Plages (Morbihan). Toutes les activités partent directement du port.</p>
-        </div>
-        <div class="info">
-          <h3>Quand&nbsp;?</h3>
-          <p>D'avril à septembre, uniquement sur réservation. Les créneaux s'adaptent à la météo et aux marées — on vous confirme tout par téléphone.</p>
-        </div>
-        <div class="info">
-          <h3>Pour qui&nbsp;?</h3>
-          <p>Jet ski dès 16 ans (avec ou sans permis mer), passager possible avant 16 ans. Bouée tractée et glisse accessibles aux plus jeunes accompagnés.</p>
-        </div>
-        <div class="info">
-          <h3>Quoi prévoir&nbsp;?</h3>
-          <p>Un maillot de bain, une serviette et votre bonne humeur ! Combinaisons néoprène et gilets de sauvetage sont fournis pour toutes les activités.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="contact" id="contact">
-    <div class="container contact-inner">
-      <p class="section-kicker light">Réservation</p>
+      <p class="section-kicker light">Réservation obligatoire</p>
       <h2>Prêt·e à mettre les gaz&nbsp;?</h2>
-      <p class="contact-lead">Un coup de fil suffit — on cale ensemble votre créneau selon la météo et les marées.</p>
-      <a class="contact-phone" href="tel:+33631049796">06&nbsp;31&nbsp;04&nbsp;97&nbsp;96</a>
-      <div class="contact-links">
-        <a href="https://www.facebook.com/fun56guidel/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
-          Facebook
-        </a>
-        <a href="https://www.instagram.com/fun56.bzh/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          Instagram
-        </a>
-        <a href="https://maps.google.com/?q=Port+de+plaisance+Guidel-Plages" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Itinéraire
-        </a>
+      <p class="cta-lead">Un coup de fil suffit — on cale ensemble votre créneau selon la météo et les marées.</p>
+      <a class="cta-phone" href="tel:+33631049796">06&nbsp;31&nbsp;04&nbsp;97&nbsp;96</a>
+      <div class="cta-links">
+        <a href="https://www.facebook.com/fun56guidel/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/fun56.bzh/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://maps.google.com/?q=Port+de+plaisance+Guidel-Plages" target="_blank" rel="noopener">Itinéraire</a>
       </div>
     </div>
   </section>
-
   <footer class="footer">
-    <div class="container footer-inner">
-      <p><strong>FUN56</strong> — Base nautique du port de Guidel-Plages · Morbihan, Bretagne Sud</p>
-      <p>Jet ski · Bouée tractée · Flyboard · Ski nautique / Wakeboard</p>
-      <p class="footer-legal">© <span id="year">2026</span> FUN56 — Tous droits réservés</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="assets/logo.png" alt="Logo FUN56">FUN<span>56</span></div>
+          <p>Les n°1 du Motonautisme en Bretagne&nbsp;! Base nautique sur le terre-plein du port de plaisance de Guidel-Plages, à l'embouchure de la Laïta.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33631049796">06 31 04 97 96</a></li>
+            <li><a href="mailto:contact.fun56@gmail.com">contact.fun56@gmail.com</a></li>
+            <li>Port de Plaisance<br>56520 Guidel-Plages</li>
+            <li>Bureaux ouverts 9h – 19h, 7j/7<br>en période estivale</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="jet-ski.html">Jet Ski</a></li>
+            <li><a href="flyboard.html">Flyboard</a></li>
+            <li><a href="wake-ski.html">Wake Board / Ski Nautique</a></li>
+            <li><a href="bouee-tractee.html">Bouée tractée</a></li>
+            <li><a href="atelier.html">Atelier mécanique jet-ski</a></li>
+            <li><a href="bon-cadeau.html">Bon cadeau</a></li>
+            <li><a href="cgv.html">Conditions générales de vente</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> FUN56 SARL — Tous droits réservés</span>
+        <span>Règlements par CB, espèces ou chèques vacances ANCV (chèques acceptés pour les cautions uniquement)</span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('nav');
-    const burger = document.getElementById('burger');
-    const links = document.getElementById('navLinks');
-
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    burger.addEventListener('click', () => {
-      const open = links.classList.toggle('open');
-      burger.classList.toggle('open', open);
-      burger.setAttribute('aria-expanded', open);
-    });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      links.classList.remove('open');
-      burger.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-    }));
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Apparition douce des sections au scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.card, .info, .price-row, .feature-text, .strip-item').forEach(el => {
-      el.classList.add('reveal');
-      observer.observe(el);
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
