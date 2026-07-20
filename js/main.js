@@ -411,6 +411,13 @@ function renderMarkdown(text) {
   return html.join("\n");
 }
 
+/* ----------------------- Lancer dans Claude (claude.ai) ----------------------- */
+
+document.getElementById("claude-btn").addEventListener("click", () => {
+  const prompt = buildPrompt(currentTool, false);
+  window.open(`https://claude.ai/new?q=${encodeURIComponent(prompt)}`, "_blank", "noopener");
+});
+
 /* --------------------------- Lancer la recherche --------------------------- */
 
 runBtn.addEventListener("click", async () => {

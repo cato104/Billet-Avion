@@ -20,9 +20,12 @@
   </header>
 
   <section class="settings-panel container" id="settings-panel" hidden>
-    <h2>Connexion à Claude (Anthropic)</h2>
-    <p>Pour que l'outil cherche lui-même les vols, il utilise l'intelligence artificielle
-    Claude avec la recherche web. Il vous faut une <strong>clé API Anthropic</strong> :</p>
+    <h2>Clé API (optionnelle — mode « recherche directe »)</h2>
+    <p><strong>Vous n'en avez pas besoin</strong> si vous utilisez le bouton
+    « ✨ Lancer dans Claude », qui passe par votre abonnement Claude Pro/Max.
+    La clé API ne sert qu'au mode avancé où les résultats s'affichent directement
+    dans cette page. Attention : l'API est facturée séparément de l'abonnement
+    Pro (paiement à l'usage). Pour en créer une :</p>
     <ol>
       <li>Créez un compte sur <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a></li>
       <li>Dans « API Keys », créez une clé (elle commence par <code>sk-ant-</code>)</li>
@@ -49,7 +52,10 @@
       <div class="tool-body">
         <div class="tool-left">
           <form class="tool-form" id="tool-form" autocomplete="off"></form>
-          <button type="button" id="run-btn" class="btn-primary btn-run">🔍 Lancer la recherche</button>
+          <button type="button" id="claude-btn" class="btn-primary btn-run">✨ Lancer dans Claude</button>
+          <p class="btn-hint">S'ouvre sur claude.ai avec votre demande prête à envoyer —
+          utilise votre abonnement Claude (Pro/Max), aucune clé API nécessaire.</p>
+          <button type="button" id="run-btn" class="btn-secondary btn-run">🔍 Recherche directe dans la page (clé API)</button>
           <details class="prompt-details">
             <summary>Voir le prompt envoyé à l'IA</summary>
             <pre id="prompt-output"></pre>
@@ -63,8 +69,9 @@
           </div>
           <div id="result-output" class="result-output">
             <p class="result-placeholder">Remplissez le formulaire puis cliquez sur
-            « Lancer la recherche ». L'IA cherchera sur le web et ses résultats
-            s'afficheront ici en direct.</p>
+            « ✨ Lancer dans Claude » : la recherche s'ouvre sur claude.ai avec
+            votre abonnement. (Cette zone n'affiche des résultats qu'en mode
+            « recherche directe » avec une clé API.)</p>
           </div>
         </div>
       </div>

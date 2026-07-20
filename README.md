@@ -20,9 +20,11 @@ Vous remplissez vos informations (origine, destination, dates, budget…), et l'
 ## Utilisation
 
 1. Ouvrez `index.html` dans un navigateur (aucune installation nécessaire).
-2. Cliquez sur **⚙️ Clé API** et collez votre clé API Anthropic (créée sur [console.anthropic.com](https://console.anthropic.com)). Elle est enregistrée uniquement dans votre navigateur.
-3. Choisissez un outil, remplissez le formulaire, puis cliquez sur **🔍 Lancer la recherche**.
+2. Choisissez un outil et remplissez le formulaire (villes, dates, budget…).
+3. Cliquez sur **✨ Lancer dans Claude** : la demande s'ouvre sur claude.ai, prête à envoyer. La recherche web est incluse dans votre abonnement Claude (Pro/Max) — **aucune clé API nécessaire**.
 
-Chaque recherche utilise le modèle Claude Opus avec la recherche web et coûte quelques centimes, débités sur votre compte Anthropic. Les prix trouvés restent indicatifs : vérifiez-les toujours avant de réserver.
+### Mode avancé (optionnel) : résultats directement dans la page
 
-Sans clé API, vous pouvez toujours utiliser le bouton « Copier le prompt » pour coller la demande dans votre assistant IA préféré.
+Avec une clé API Anthropic (créée sur [console.anthropic.com](https://console.anthropic.com), facturée à l'usage, séparément de l'abonnement Pro), le bouton **🔍 Recherche directe** affiche les résultats en streaming dans la page. La clé est enregistrée uniquement dans votre navigateur.
+
+Les prix trouvés restent indicatifs : vérifiez-les toujours avant de réserver.
