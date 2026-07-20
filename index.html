@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billet Avion — Trouvez des vols moins chers avec l'IA</title>
+  <meta name="description" content="10 prompts IA prêts à l'emploi pour trouver des billets d'avion moins chers : meilleures dates, escales intelligentes, frais cachés, négociation…">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">✈️ <span>Billet Avion</span></div>
+      <p class="tagline">Trouvez des billets d'avion moins chers grâce à l'IA</p>
+    </div>
+  </header>
+
+  <section class="intro container">
+    <p>Choisissez un outil, remplissez vos informations, puis copiez le prompt généré
+    dans votre assistant IA préféré (Claude, ChatGPT…). Les champs laissés vides
+    restent entre crochets pour que vous puissiez les compléter plus tard.</p>
+  </section>
+
+  <nav class="tool-nav container" id="tool-nav" aria-label="Choix de l'outil"></nav>
+
+  <main class="container tool-area">
+    <section class="tool-panel" id="tool-panel">
+      <div class="tool-head">
+        <h1 id="tool-title"></h1>
+        <p id="tool-desc"></p>
+      </div>
+      <div class="tool-body">
+        <form class="tool-form" id="tool-form" autocomplete="off"></form>
+        <div class="prompt-box">
+          <div class="prompt-box-bar">
+            <span>Votre prompt</span>
+            <button type="button" id="copy-btn" class="btn-copy">Copier le prompt</button>
+          </div>
+          <pre id="prompt-output"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Billet Avion — un outil de prompts pour voyager moins cher. Les prix et offres
+      indiqués par une IA doivent toujours être vérifiés avant réservation.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

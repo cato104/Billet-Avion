@@ -1,0 +1,205 @@
+:root {
+  --blue: #1668e3;
+  --blue-dark: #0e4cab;
+  --sky: #eef4fe;
+  --ink: #1c2433;
+  --muted: #5b6575;
+  --line: #dde4ef;
+  --radius: 12px;
+  font-size: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: #f7f9fc;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* En-tête */
+.site-header {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  color: #fff;
+  padding: 2.2rem 0 2rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin-top: 0.4rem;
+  opacity: 0.9;
+}
+
+.intro {
+  padding: 1.5rem 1.25rem 0.5rem;
+  color: var(--muted);
+  max-width: 780px;
+  text-align: center;
+}
+
+/* Navigation des outils */
+.tool-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.tool-chip {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.tool-chip:hover { border-color: var(--blue); color: var(--blue); }
+
+.tool-chip.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+/* Panneau de l'outil */
+.tool-area { padding-bottom: 3rem; }
+
+.tool-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tool-head {
+  background: var(--sky);
+  border-bottom: 1px solid var(--line);
+  padding: 1.25rem 1.5rem;
+}
+
+.tool-head h1 { font-size: 1.25rem; }
+
+.tool-head p {
+  color: var(--muted);
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.tool-body {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(300px, 1.4fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Formulaire */
+.tool-form .field { margin-bottom: 1rem; }
+
+.tool-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+}
+
+.tool-form input,
+.tool-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--ink);
+  background: #fcfdff;
+}
+
+.tool-form textarea { min-height: 5.5rem; resize: vertical; }
+
+.tool-form input:focus,
+.tool-form textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: -1px;
+}
+
+/* Aperçu du prompt */
+.prompt-box {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #fbfcfe;
+}
+
+.prompt-box-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.btn-copy {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-copy:hover { background: var(--blue-dark); }
+.btn-copy.copied { background: #1a9e57; }
+
+#prompt-output {
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+#prompt-output .gap {
+  background: #fff3cd;
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+
+/* Pied de page */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .tool-body { grid-template-columns: 1fr; }
+}
