@@ -146,6 +146,42 @@ body {
   text-align: center;
 }
 
+.intro-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  text-align: left;
+}
+
+.intro-card h2 { font-size: 1rem; color: var(--ink); margin-bottom: 0.5rem; }
+.intro-card ul { list-style: none; }
+.intro-card li { margin: 0.4rem 0; font-size: 0.92rem; }
+
+/* Onglet et panneau « Offres en direct » */
+.tool-chip.chip-live {
+  border-color: #e8590c;
+  color: #e8590c;
+  font-weight: 600;
+}
+
+.tool-chip.chip-live.active {
+  background: #e8590c;
+  border-color: #e8590c;
+  color: #fff;
+}
+
+.live-widget-box { min-height: 26rem; }
+
+.live-widget {
+  padding: 1rem;
+  flex: 1;
+}
+
+.live-widget [data-skyscanner-widget] { min-height: 18rem; }
+
+.widget-fallback { font-size: 0.85rem; margin-top: 0.75rem; }
+
 /* Navigation des outils */
 .tool-nav {
   display: flex;

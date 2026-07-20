@@ -325,6 +325,8 @@ function render() {
 
 function selectTool(tool) {
   currentTool = tool;
+  livePanel.hidden = true;
+  toolPanel.hidden = false;
   titleEl.textContent = tool.title;
   descEl.textContent = tool.desc;
 
@@ -352,6 +354,46 @@ function selectTool(tool) {
     form.appendChild(wrap);
   }
   render();
+}
+
+/* ------------------------- Panneau « Offres en direct » ------------------------- */
+
+const livePanel = document.getElementById("live-panel");
+const toolPanel = document.getElementById("tool-panel");
+
+function showLivePanel() {
+  livePanel.hidden = false;
+  toolPanel.hidden = true;
+  for (const chip of nav.children) {
+    chip.classList.toggle("active", chip.dataset.id === "live");
+  }
+}
+
+document.getElementById("gflights-btn").addEventListener("click", () => {
+  const fields = document.getElementById("live-form").elements;
+  const origin = fields.origin.value.trim() || "Paris";
+  const destination = fields.destination.value.trim();
+  const dates = fields.dates.value.trim();
+  const query = destination
+    ? `vols de ${origin} à ${destination} ${dates}`.trim()
+    : `vols pas chers depuis ${origin} ${dates}`.trim();
+  window.open(`https://www.google.com/travel/flights?q=${encodeURIComponent(query)}&hl=fr`, "_blank", "noopener");
+});
+
+document.getElementById("explore-btn").addEventListener("click", () => {
+  window.open("https://www.google.com/travel/explore?hl=fr", "_blank", "noopener");
+});
+
+/* ------------------------------- Navigation ------------------------------- */
+
+{
+  const liveChip = document.createElement("button");
+  liveChip.type = "button";
+  liveChip.className = "tool-chip chip-live";
+  liveChip.dataset.id = "live";
+  liveChip.textContent = "🔥 Offres en direct";
+  liveChip.addEventListener("click", showLivePanel);
+  nav.appendChild(liveChip);
 }
 
 for (const tool of TOOLS) {
@@ -475,3 +517,4 @@ runBtn.addEventListener("click", async () => {
 
 refreshKeyStatus();
 selectTool(TOOLS[0]);
+showLivePanel();

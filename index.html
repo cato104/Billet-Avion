@@ -41,9 +41,62 @@
     Anthropic.</p>
   </section>
 
+  <section class="intro container">
+    <div class="intro-card">
+      <h2>Comment ça marche ?</h2>
+      <ul>
+        <li><strong>🔥 Offres en direct</strong> — les vrais prix, tout de suite : un moteur de
+        recherche de vols intégré dans la page + des raccourcis vers Google Flights.</li>
+        <li><strong>🤖 Analyses IA</strong> (onglets 1 à 10) — pour aller plus loin : meilleures
+        dates, escales malignes, frais cachés, négociation… Cliquez « ✨ Lancer dans Claude »
+        et l'IA fait la recherche avec votre abonnement Claude.</li>
+      </ul>
+    </div>
+  </section>
+
   <nav class="tool-nav container" id="tool-nav" aria-label="Choix de l'outil"></nav>
 
   <main class="container tool-area">
+    <section class="tool-panel" id="live-panel">
+      <div class="tool-head">
+        <h1>🔥 Offres en direct</h1>
+        <p>Les prix réels, en temps réel — sans IA, sans clé, sans attente.</p>
+      </div>
+      <div class="tool-body">
+        <div class="tool-left">
+          <form class="tool-form" id="live-form" autocomplete="off">
+            <div class="field">
+              <label for="live-origin">Ville de départ</label>
+              <input id="live-origin" name="origin" placeholder="Paris">
+            </div>
+            <div class="field">
+              <label for="live-destination">Destination (laisser vide = partout)</label>
+              <input id="live-destination" name="destination" placeholder="Tokyo, Lisbonne… ou vide">
+            </div>
+            <div class="field">
+              <label for="live-dates">Quand ? (libre)</label>
+              <input id="live-dates" name="dates" placeholder="septembre, du 10 au 20 août, weekend…">
+            </div>
+          </form>
+          <button type="button" id="gflights-btn" class="btn-primary btn-run">✈️ Voir les prix sur Google Flights</button>
+          <p class="btn-hint">Ouvre Google Flights avec votre recherche : prix réels,
+          calendrier des jours les moins chers, réservation directe.</p>
+          <button type="button" id="explore-btn" class="btn-secondary btn-run">🗺️ Explorer les destinations pas chères</button>
+        </div>
+        <div class="result-box live-widget-box">
+          <div class="result-bar"><span>Recherche Skyscanner intégrée</span></div>
+          <div class="live-widget">
+            <div data-skyscanner-widget="SearchWidget"
+                 data-locale="fr-FR"
+                 data-market="FR"
+                 data-currency="EUR"></div>
+            <p class="result-placeholder widget-fallback">Si le module Skyscanner ne
+            s'affiche pas ci-dessus (bloqueur de pub, réseau…), utilisez le bouton
+            Google Flights à gauche : mêmes prix réels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="tool-panel" id="tool-panel">
       <div class="tool-head">
         <h1 id="tool-title"></h1>
@@ -87,5 +140,6 @@
 
   <script src="js/claude.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
 </body>
 </html>
