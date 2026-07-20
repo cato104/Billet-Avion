@@ -1,8 +1,8 @@
 # ✈️ Billet Avion
 
-**Billet Avion** est un outil pour trouver des billets d'avion moins chers grâce à l'IA.
+**Billet Avion** est un outil qui trouve pour vous des billets d'avion moins chers grâce à l'IA.
 
-Il regroupe 10 prompts prêts à l'emploi : vous remplissez vos informations (origine, destination, dates, budget…), le prompt complet se génère automatiquement, et vous le copiez dans votre assistant IA préféré (Claude, ChatGPT…).
+Vous remplissez vos informations (origine, destination, dates, budget…), et l'outil interroge directement Claude (Anthropic) **avec la recherche web activée** : l'IA cherche de vrais prix et de vraies offres en ligne, et la réponse s'affiche en direct dans la page.
 
 ## Les 10 outils
 
@@ -19,4 +19,10 @@ Il regroupe 10 prompts prêts à l'emploi : vous remplissez vos informations (or
 
 ## Utilisation
 
-Ouvrez simplement `index.html` dans un navigateur. Aucune installation nécessaire.
+1. Ouvrez `index.html` dans un navigateur (aucune installation nécessaire).
+2. Cliquez sur **⚙️ Clé API** et collez votre clé API Anthropic (créée sur [console.anthropic.com](https://console.anthropic.com)). Elle est enregistrée uniquement dans votre navigateur.
+3. Choisissez un outil, remplissez le formulaire, puis cliquez sur **🔍 Lancer la recherche**.
+
+Chaque recherche utilise le modèle Claude Opus avec la recherche web et coûte quelques centimes, débités sur votre compte Anthropic. Les prix trouvés restent indicatifs : vérifiez-les toujours avant de réserver.
+
+Sans clé API, vous pouvez toujours utiliser le bouton « Copier le prompt » pour coller la demande dans votre assistant IA préféré.

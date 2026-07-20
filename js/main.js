@@ -248,11 +248,51 @@ const output = document.getElementById("prompt-output");
 const titleEl = document.getElementById("tool-title");
 const descEl = document.getElementById("tool-desc");
 const copyBtn = document.getElementById("copy-btn");
+const runBtn = document.getElementById("run-btn");
+const runStatus = document.getElementById("run-status");
+const resultOutput = document.getElementById("result-output");
+const settingsBtn = document.getElementById("settings-btn");
+const settingsPanel = document.getElementById("settings-panel");
+const apiKeyInput = document.getElementById("api-key-input");
+const keyStatus = document.getElementById("key-status");
 
+const KEY_STORAGE = "billet-avion-api-key";
 let currentTool = TOOLS[0];
+let searching = false;
+
+/* ------------------------------ Clé API ------------------------------ */
+
+function getApiKey() {
+  return localStorage.getItem(KEY_STORAGE) ?? "";
+}
+
+function refreshKeyStatus() {
+  keyStatus.classList.toggle("ok", getApiKey() !== "");
+}
+
+settingsBtn.addEventListener("click", () => {
+  settingsPanel.hidden = !settingsPanel.hidden;
+  if (!settingsPanel.hidden) apiKeyInput.focus();
+});
+
+document.getElementById("save-key-btn").addEventListener("click", () => {
+  const key = apiKeyInput.value.trim();
+  if (!key) return;
+  localStorage.setItem(KEY_STORAGE, key);
+  apiKeyInput.value = "";
+  settingsPanel.hidden = true;
+  refreshKeyStatus();
+});
+
+document.getElementById("clear-key-btn").addEventListener("click", () => {
+  localStorage.removeItem(KEY_STORAGE);
+  apiKeyInput.value = "";
+  refreshKeyStatus();
+});
+
+/* --------------------------- Prompt et outils --------------------------- */
 
 function formatDate(value) {
-  // Convertit AAAA-MM-JJ (input date) en date lisible en français.
   const [y, m, d] = value.split("-").map(Number);
   if (!y || !m || !d) return value;
   return new Date(y, m - 1, d).toLocaleDateString("fr-FR", {
@@ -337,11 +377,94 @@ copyBtn.addEventListener("click", async () => {
     ta.remove();
   }
   copyBtn.textContent = "Copié !";
-  copyBtn.classList.add("copied");
-  setTimeout(() => {
-    copyBtn.textContent = "Copier le prompt";
-    copyBtn.classList.remove("copied");
-  }, 1600);
+  setTimeout(() => { copyBtn.textContent = "Copier le prompt"; }, 1600);
 });
 
+/* --------------------------- Rendu des résultats --------------------------- */
+
+function renderMarkdown(text) {
+  // Mise en forme légère : titres, gras, italique, listes.
+  const lines = escapeHtml(text).split("\n");
+  const html = [];
+  let inList = false;
+  for (const raw of lines) {
+    const line = raw
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
+    const listMatch = line.match(/^\s*(?:[-•*]|\d+[.)])\s+(.*)$/);
+    if (listMatch) {
+      if (!inList) { html.push("<ul>"); inList = true; }
+      html.push(`<li>${listMatch[1]}</li>`);
+      continue;
+    }
+    if (inList) { html.push("</ul>"); inList = false; }
+    const heading = line.match(/^\s*(#{1,4})\s+(.*)$/);
+    if (heading) {
+      html.push(`<h3>${heading[2]}</h3>`);
+    } else if (line.trim() === "") {
+      html.push("");
+    } else {
+      html.push(`<p>${line}</p>`);
+    }
+  }
+  if (inList) html.push("</ul>");
+  return html.join("\n");
+}
+
+/* --------------------------- Lancer la recherche --------------------------- */
+
+runBtn.addEventListener("click", async () => {
+  if (searching) return;
+
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    settingsPanel.hidden = false;
+    apiKeyInput.focus();
+    resultOutput.innerHTML =
+      '<p class="result-error">Ajoutez d\'abord votre clé API Anthropic (bouton ⚙️ en haut de page).</p>';
+    return;
+  }
+
+  searching = true;
+  runBtn.disabled = true;
+  runBtn.textContent = "⏳ Recherche en cours…";
+  runStatus.textContent = "Connexion à Claude…";
+  resultOutput.innerHTML = "";
+
+  let answer = "";
+  const answerDiv = document.createElement("div");
+  resultOutput.appendChild(answerDiv);
+
+  try {
+    await runSearch(apiKey, buildPrompt(currentTool, false), {
+      onText(delta) {
+        answer += delta;
+        answerDiv.innerHTML = renderMarkdown(answer);
+        runStatus.textContent = "Rédaction de la réponse…";
+      },
+      onSearchStart() {
+        runStatus.textContent = "🔎 Recherche sur le web…";
+      },
+      onSearchQuery(query) {
+        runStatus.textContent = `🔎 Recherche : « ${query} »`;
+      },
+      onStatus(message) {
+        runStatus.textContent = message;
+      },
+    });
+    runStatus.textContent = "✅ Terminé";
+  } catch (error) {
+    runStatus.textContent = "";
+    const p = document.createElement("p");
+    p.className = "result-error";
+    p.textContent = `❌ ${error.message}`;
+    resultOutput.appendChild(p);
+  } finally {
+    searching = false;
+    runBtn.disabled = false;
+    runBtn.textContent = "🔍 Lancer la recherche";
+  }
+});
+
+refreshKeyStatus();
 selectTool(TOOLS[0]);
